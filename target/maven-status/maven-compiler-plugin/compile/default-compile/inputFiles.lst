@@ -1,0 +1,8 @@
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/service/impl/BooksServiceImpl.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/repository/BooksRepository.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/ApiApplication.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/controller/BooksRestController.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/util/ObjectMapperUtils.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/model/Books.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/service/BooksService.java
+/home/andre/projetos/api-java-books/src/main/java/com/books/api/dto/BooksDTO.java
