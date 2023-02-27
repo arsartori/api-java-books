@@ -1,0 +1,8 @@
+com/books/api/dto/BooksDTO.class
+com/books/api/service/BooksService.class
+com/books/api/controller/BooksRestController.class
+com/books/api/util/ObjectMapperUtils.class
+com/books/api/model/Books.class
+com/books/api/ApiApplication.class
+com/books/api/repository/BooksRepository.class
+com/books/api/service/impl/BooksServiceImpl.class

@@ -16,37 +16,37 @@ import java.util.List;
 public class BooksRestController {
 
     @Autowired
-    private BooksService bookService;
+    private BooksService booksService;
 
     @GetMapping(value = "/")
     public List<BooksDTO> getAllBooks() {
-        return ObjectMapperUtils.mapAll(bookService.findAll(), BooksDTO.class);
+        return ObjectMapperUtils.mapAll(booksService.findAll(), BooksDTO.class);
     }
 
     @GetMapping(value = "/byBookNumber/{bookNumber}")
     public BooksDTO getBookByBookNumber(@PathVariable("bookNumber") Long bookNumber) {
-        return ObjectMapperUtils.map(bookService.findByBookNumber(bookNumber), BooksDTO.class);
+        return ObjectMapperUtils.map(booksService.findByBookNumber(bookNumber), BooksDTO.class);
     }
 
     @GetMapping(value = "/byEmail/{email}")
     public BooksDTO getBookByEmail(@PathVariable("email") String email) {
-        return ObjectMapperUtils.map(bookService.findByEmail(email), BooksDTO.class);
+        return ObjectMapperUtils.map(booksService.findByEmail(email), BooksDTO.class);
     }
 
     @GetMapping(value = "/orderByGpa")
     public List<BooksDTO> findAllByOrderByGpaDesc() {
-        return ObjectMapperUtils.mapAll(bookService.findAllByOrderByGpaDesc(), BooksDTO.class);
+        return ObjectMapperUtils.mapAll(booksService.findAllByOrderByGpaDesc(), BooksDTO.class);
     }
 
     @PostMapping(value = "/save")
-    public ResponseEntity<?> saveOrUpdateBook(@RequestBody BooksDTO bookDTO) {
-        bookService.saveOrUpdateBook(ObjectMapperUtils.map(bookDTO, Books.class));
+    public ResponseEntity<?> saveOrUpdateBook(@RequestBody BooksDTO booksDTO) {
+        booksService.saveOrUpdateBook(ObjectMapperUtils.map(booksDTO, Books.class));
         return new ResponseEntity("Book added successfully", HttpStatus.OK);
     }
 
     @DeleteMapping(value = "/delete/{bookNumber}")
     public ResponseEntity<?> deleteBookByBookNumber(@PathVariable long bookNumber) {
-        bookService.deleteBookById(bookService.findByBookNumber(bookNumber).getId());
+        booksService.deleteBookById(booksService.findByBookNumber(bookNumber).getId());
         return new ResponseEntity("Book deleted successfully", HttpStatus.OK);
     }
 
